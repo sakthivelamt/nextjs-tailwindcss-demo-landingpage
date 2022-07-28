@@ -19,7 +19,7 @@ const ServBlocks = () => {
                     </div>
                     <br/>
                     <p className="text-center servpara"><b>Business Plans</b></p>
-                    <p className="text-center text-lg servpara">I'm a paragraph. Click here to add <br/>your own text and edit me.</p>
+                    <p className="text-center text-lg servpara">I&apos;m a paragraph. Click here to add <br/>your own text and edit me.</p>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@ const ServBlocks = () => {
                     </div>
                     <br/>
                     <p className="text-center servpara"><b>Business Plans</b></p>
-                    <p className="text-center text-lg servpara">I'm a paragraph. Click here to add <br/>your own text and edit me.</p>
+                    <p className="text-center text-lg servpara">I&apos;m a paragraph. Click here to add <br/>your own text and edit me.</p>
                 </div>
             </div>
         </div>
@@ -70,7 +70,7 @@ const ServBlocks = () => {
                     </div>
                     <br/>
                     <p className="text-center servpara "><b>Business Plans</b></p>
-                    <p className="text-center text-lg servpara ">I'm a paragraph. Click here to add <br/>your own text and edit me.</p>
+                    <p className="text-center text-lg servpara ">I&apos;m a paragraph. Click here to add <br/>your own text and edit me.</p>
                 </div>
             </div>
 

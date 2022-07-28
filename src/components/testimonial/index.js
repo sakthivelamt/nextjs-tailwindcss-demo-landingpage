@@ -41,7 +41,7 @@ const Testimonial = () => {
 
           {/* <!-- Inner --> */}
           <div className="carousel-inner relative w-full overflow-hidden h-[400px]">
-            <h3 className="absolute top-10	 text-center left-[10%]	right-[10%] text-5xl	text-white">“I'm a testimonial. Click to <br />edit me and add text”</h3>
+            <h3 className="absolute top-10	 text-center left-[10%]	right-[10%] text-5xl	text-white">“I&apos;m a testimonial. Click to <br />edit me and add text”</h3>
             {/* <!-- Single item --> */}
             <div className="carousel-item active absolute bottom-20 float-left w-full h-[200px]">
               {/* <img

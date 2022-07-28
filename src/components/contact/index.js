@@ -68,7 +68,7 @@ const Contact = () => {
               </div>
             </div>
             <div className="w-[140px] h-[50px]">
-              <Button children='Submit' />
+              <Button label='Submit' />
             </div>
 
           </div>
