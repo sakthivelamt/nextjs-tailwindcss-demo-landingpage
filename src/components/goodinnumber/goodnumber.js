@@ -3,7 +3,7 @@ const Goodnumber = () => {
     <section className="bg-[rgb(22,22,63)]">
         <div className="xm:flex xm:justify-center inline">
             <h1 className="text-center text-4xl font-bold text-white xs:pt-28 xs:pb-16 pt-16 pb-12 xm:text-2xl xm:w-[250px] w-[100%]">
-            We're Good with Numbers
+            We&apos;re Good with Numbers
             </h1>
         </div>
        
