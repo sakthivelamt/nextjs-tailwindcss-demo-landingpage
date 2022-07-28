@@ -1,0 +1,61 @@
+@media only screen and (min-width: 321px ) {
+    .main-Background{
+        background-image: url('https://static.wixstatic.com/media/84770f_994ffe746a074d1f8a2ec9456a8bf1ff~mv2.png/v1/fill/w_1349,h_960,al_br,q_90,usm_0.66_1.00_0.01,enc_auto/84770f_994ffe746a074d1f8a2ec9456a8bf1ff~mv2.png');
+        background-repeat: no-repeat;
+    }
+
+}
+
+@media only screen and (max-width: 320px ) {
+       .mainBackground-mobile{
+             background-image: url('/wix-home-mobile.webp');
+             background-repeat: no-repeat;
+             background-position: right bottom;
+             
+        }
+   
+}
+@media only screen and (max-width:475px) {
+    .srvblk{
+        height: 242px;
+        font-size: 14px;
+    }
+    .srvlbksvg{
+        height: 72px;
+        width: 74px;
+    }
+    .servpara{
+        font-size: 14px;
+    }
+    
+}
+@media only screen and (max-width:767px) {
+    .gNsvg{
+    display: flex;
+    justify-content: center;
+    margin-block: 24px;
+    }
+   
+}
+*{
+    font-size: 'none';
+    font-weight: 'none';
+    font-family: Arial,Helvetica,sans-serif;
+}
+.header{
+position : sticky;
+left: 0px;
+right : 0px;
+top : 0px;
+z-index: 10;
+}
+.headerscrool{
+    background-color: rgb(255, 255, 255);
+}
+
+.test{
+    background-color: red;
+}
+/* body{
+    max-width: 1440px;
+} */
