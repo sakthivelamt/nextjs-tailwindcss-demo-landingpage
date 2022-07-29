@@ -1,5 +1,3 @@
-import React, {usestate} from 'react';
-
 const Footer = () => {
 
   return (

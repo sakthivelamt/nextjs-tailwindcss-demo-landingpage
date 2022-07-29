@@ -2,9 +2,53 @@ import React , {useEffect,useState} from 'react'
 
 function ScrollTop() {
 
-  // const [hidden,sethidden]=useState(true)
+  const [scrooltop,setScroolTop]=useState(true)
+
+  // for hide element after 5 sec
+  const createScrollStopListener = (callback, timeout) => {
+    let removed = false;
+    let handle = null;
+    const onScroll = () => {
+        if (handle) {
+             clearTimeout(handle);
+        }
+        handle = setTimeout(callback, timeout || 200); // default 200 ms
+    }
+    
+    window.addEventListener('scroll', onScroll)
+    return () => {
+        if (removed) {
+            return;
+        }
+        removed = true;
+          if (handle) {
+              clearTimeout(handle);
+        }
+        window.removeEventListener('scroll', onScroll)
+       
+    };
+};
 
 
+
+  // for show and hide when scroll after 500px in window
+  const showscrool = () =>{
+    if(window.scrollY >= 500){
+        setScroolTop(true)
+        // calling the function of scroll top
+        createScrollStopListener(() => {
+          setScroolTop(false)
+      },3000);
+       
+    }else{
+      setScroolTop(false)
+    }
+  }
+
+  useEffect( ()=>{window.addEventListener('scroll',showscrool)})
+
+
+  // for scroll to top when click the scroll button 
   const scrollTop = () =>{
     window.scroll({
       top:0,
@@ -12,9 +56,11 @@ function ScrollTop() {
       behavior : 'smooth'
     })
   }
+
+
   return (
-    <div >
-      <div className='sm:hidden block fixed bottom-6 left-4 h-[50px] w-[50px] rounded-full shadow-[0px_0px_10px_-5px_rgba(0,0,0,0.5)]	' onClick={scrollTop}>
+    <div className= {scrooltop ? 'block' : 'hidden'} >
+      <div className='sm:hidden block fixed bottom-6 left-4 h-[50px] w-[50px] rounded-full shadow-[0px_0px_15px_-5px_rgba(0,0,0,0.5)]	' onClick={scrollTop}>
         <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 20 160 160" xmlns="http://www.w3.org/2000/svg" viewBox="20 20 160 160" height="100%" width="100%" data-type="color" role="presentation" aria-hidden="true" aria-labelledby="BACK_TO_TOP_BUTTON-svgtitle"><title id="BACK_TO_TOP_BUTTON-svgtitle"></title>
           <g fillRule="evenodd">
             <path fillRule="nonzero" fill="#FFFFFF" d="M180 100c0 44.183-35.817 80-80 80s-80-35.817-80-80 35.817-80 80-80 80 35.817 80 80z" data-color="1"></path>
