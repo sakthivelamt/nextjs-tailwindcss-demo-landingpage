@@ -4,48 +4,53 @@ function ScrollTop() {
 
   const [scrooltop,setScroolTop]=useState(true)
 
-  // for hide element after 5 sec
-  const createScrollStopListener = (callback, timeout) => {
-    let removed = false;
-    let handle = null;
-    const onScroll = () => {
-        if (handle) {
-             clearTimeout(handle);
-        }
-        handle = setTimeout(callback, timeout || 200); // default 200 ms
-    }
-    
-    window.addEventListener('scroll', onScroll)
-    return () => {
-        if (removed) {
-            return;
-        }
-        removed = true;
-          if (handle) {
-              clearTimeout(handle);
-        }
-        window.removeEventListener('scroll', onScroll)
+//   // for hide element after 5 sec
+//   const createScrollStopListener = (callback, timeout) => {
+//     let removed = false;
+//     let handle = null;
+//     const onScroll = () => {
+//       console.log("asji");
+//         if (handle) {
+//              clearTimeout(handle);
+//         }
+//         handle = setTimeout(callback, timeout || 200); // default 200 ms
+//     }
+
+//     window.addEventListener('scroll', onScroll)
+//     return () => {
+//         if (removed) {
+//             return;
+//         }
+//         removed = true;
+//           if (handle) {
+//               clearTimeout(handle);
+//         }
+//         window.removeEventListener('scroll', onScroll)
        
-    };
-};
+//     };
+// };
 
 
-
+let some = null
   // for show and hide when scroll after 500px in window
   const showscrool = () =>{
+    if( some ) clearTimeout(some)
+    some = setTimeout(()=>setScroolTop(false),3000)
     if(window.scrollY >= 500){
         setScroolTop(true)
         // calling the function of scroll top
-        createScrollStopListener(() => {
-          setScroolTop(false)
-      },3000);
+      //   createScrollStopListener(() => {
+      //     setScroolTop(false)
+      // },3000);
        
     }else{
       setScroolTop(false)
     }
   }
 
-  useEffect( ()=>{window.addEventListener('scroll',showscrool)})
+  useEffect( ()=>{
+    window.addEventListener('scroll',showscrool)
+  })
 
 
   // for scroll to top when click the scroll button 
