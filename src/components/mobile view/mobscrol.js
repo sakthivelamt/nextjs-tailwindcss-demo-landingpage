@@ -63,7 +63,7 @@ const MobBarNav = () => {
             })
     }
     return (
-        <nav className="xs:hidden fixed top-0 left-0 z-[21] w-[100%] h-[100%]">
+        <nav className="xs:hidden fixed top-0 left-0 z-[21] w-[100%] h-[100%]  bg-white">
 
             <div className="grid grid-cols-1 justify-items-center leading-[3rem] mt-[100px]">
                 <a className="mr-5 hover:text-purple-900 after:text-purple-90 cursor-pointer	" onClick={homeScroll}>Home</a>
