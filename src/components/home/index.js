@@ -14,7 +14,7 @@ const Main = () => {
 
   return (
     <div>
-      <div className="main-Background h-screen bg-right-top mainBackground-mobile xsmw:h-[393px]">
+      <div className="main-Background h-screen bg-right-top mainBackground-mobile xsmw:h-[520px]">
         <Contant />
       </div>
       <ServHead />

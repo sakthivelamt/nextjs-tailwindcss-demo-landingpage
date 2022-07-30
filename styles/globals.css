@@ -43,11 +43,12 @@
     font-family: Arial,Helvetica,sans-serif;
 }
 .header{
-position : sticky;
+position : fixed;
+width: 100%;
 left: 0px;
 right : 0px;
 top : 0px;
-z-index: 10;
+z-index: 5;
 }
 .headerscrool{
     background-color: rgb(255, 255, 255);
