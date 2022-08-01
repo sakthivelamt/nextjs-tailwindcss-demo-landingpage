@@ -3,7 +3,7 @@ import Header from "../header"
 
 const Contant = () => {
   return (
-    <div className="md:mt-32 md:ml-32 md:text-left text-center xsmw:h-[393px] md:100vh">
+    <div className="md:mt-32 md:ml-32 md:text-left text-center xsmw:h-[393px] h-[100%]">
       <Header />
         <div className="mxmd:pt-36"> 
           <h1 className="sm:h-[192px] xs:text-7xl xs:font-extrabold leading-tight tracking-tight text-4xl font-semibold ">The Power <br/> of Good Advice</h1>
