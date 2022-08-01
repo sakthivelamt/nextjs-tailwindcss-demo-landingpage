@@ -48,21 +48,21 @@ const Contact = () => {
                 <input id="grid-last-name" className="w-full h-[39px] appearance-none bg-transparent border-b border-black text-gray-700 py-[3px] pr-[3px] leading-tight focus:outline-none focus:border-purple-600 focus:border-b-2 " type="text" aria-label="Full name" />
               </div>
             </div>
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full px-3">
+            <div className="flex flex-wrap  mb-6">
+              <div className="w-full ">
                 <label className="block  tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                   Email Address
                 </label>
-                <input className="md:w-[69%] w-[100%] h-[68.5px]appearance-none bg-transparent border-b border-black  text-gray-700 mrpy-[3px] pr-[3px] leading-tight focus:outline-none focus:border-purple-600 focus:border-b-2" type="email" aria-label="Full name" />
+                <input className="md:w-[73%] w-[100%] h-[68.5px]appearance-none bg-transparent border-b border-black  text-gray-700 mrpy-[3px] pr-[3px] leading-tight focus:outline-none focus:border-purple-600 focus:border-b-2" type="email" aria-label="Full name" />
               </div>
             </div>
 
-            <div className="flex flex-wrap -mx-3 mb-6">
-              <div className="w-full px-3">
+            <div className="flex flex-wrap w-full mb-6">
+              <div className="w-full">
                 <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                   Leave us a message...
                 </label>
-                <input className=" md:w-[69%] w-[100%] h-[68.5px] pt-[13.5px] pb-[3px] pr-[10px] appearance-none bg-transparent border-b border-black  text-gray-700 mr-3 p-4  leading-tight focus:outline-none focus:border-purple-600 focus:border-b-2" type="email" aria-label="Full name">
+                <input className=" md:w-[73%] w-[100%] h-[68.5px] pt-[13.5px] pb-[3px] pr-[10px] appearance-none bg-transparent border-b border-black  text-gray-700  p-4  leading-tight focus:outline-none focus:border-purple-600 focus:border-b-2" type="email" aria-label="Full name">
 
                 </input>
               </div>
