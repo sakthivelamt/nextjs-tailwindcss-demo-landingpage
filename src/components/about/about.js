@@ -1,7 +1,7 @@
 import { PrismicRichText } from "@prismicio/react";
 
 const About = ({about}) => {
-  console.log(about.data.about_right_image.url);
+  // console.log(about.data.about_right_image.url);
   return (
     <div className="xs:flex ">
         <div className=" xs:w-1/2 xsmw:text-center">

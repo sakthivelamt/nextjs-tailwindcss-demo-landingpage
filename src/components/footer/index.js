@@ -1,7 +1,8 @@
 import { PrismicRichText } from "@prismicio/react";
+import CreateTodo from "./test"
 
 const Footer = ({footer}) => {
-  console.log(footer.data);
+  // console.log(footer.data);
 
   return (
     <div>
@@ -20,6 +21,7 @@ const Footer = ({footer}) => {
         <PrismicRichText field={footer.data.footer_text} />
         <span><a href="https://amt.in/" target="blank">&nbsp;Amt.in</a></span>
       </footer>
+      {/* <CreateTodo /> */}
     </div>
   )
 }

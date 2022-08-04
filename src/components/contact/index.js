@@ -1,8 +1,38 @@
 import { PrismicRichText } from "@prismicio/react";
 import Button from "../button"
-
+import React,{useState} from "react";
 const Contact = ({contact}) => {
-  // console.log(contact.data);
+
+
+const[inital,setValue] = useState({
+  firstname: "",
+  lastname: "",
+  email:"",
+  commants:""
+})
+
+const handleChange = (e) => {
+  console.log(e);
+  setValue((prevState)=>({
+    ...prevState,
+    [e.target.name]: e.target.value
+  }));
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault()
+  console.log(inital);
+
+  return fetch('/.netlify/functions/todo', {
+    body: JSON.stringify(inital),
+    method: 'POST'
+  }).then(response => {
+    return response.json()
+  })
+  // ... submit to API or something
+};
+
+// )
   return (
 
     <div className=" md:flex bg-[url('/wix-contact.webp')] md:h-[660px] bg-no-repeat bg-cover max-w-full" style={{backgroundImage:`url(${contact.data.contact_image})`}}>
@@ -40,14 +70,14 @@ const Contact = ({contact}) => {
                 <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2 " htmlFor="grid-first-name">
                   First Name
                 </label>
-                <input id="grid-first-name" className=" w-full appearance-none bg-transparent border-b-[1px] border-black text-gray-700  py-[3px] pr-[3px] leading-loose focus:outline-none focus:border-purple-600 focus:border-b-2 " type="text" aria-label="Full name" />
+                <input value={inital.firstname} onChange={handleChange} id="grid-first-name" name="firstname" className=" w-full appearance-none bg-transparent border-b-[1px] border-black text-gray-700  py-[3px] pr-[3px] leading-loose focus:outline-none focus:border-purple-600 focus:border-b-2 " type="text" aria-label="Full name" />
                 {/* <p className="text-red-500 text-xs italic mt-1">Please fill out this field.</p>  */}
               </div>
               <div className="w-full md:w-1/2">
                 <label className="block  tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-last-name">
                   Last Name
                 </label>
-                <input id="grid-last-name" className="w-full h-[39px] appearance-none bg-transparent border-b border-black text-gray-700 py-[3px] pr-[3px] leading-tight focus:outline-none focus:border-purple-600 focus:border-b-2 " type="text" aria-label="Full name" />
+                <input value={inital.lastname} onChange={handleChange} id="grid-last-name" name="lastname" className="w-full h-[39px] appearance-none bg-transparent border-b border-black text-gray-700 py-[3px] pr-[3px] leading-tight focus:outline-none focus:border-purple-600 focus:border-b-2 " type="text" aria-label="Full name" />
               </div>
             </div>
             <div className="flex flex-wrap  mb-6">
@@ -55,7 +85,7 @@ const Contact = ({contact}) => {
                 <label className="block  tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                   Email Address
                 </label>
-                <input className="md:w-[73%] w-[100%] h-[68.5px]appearance-none bg-transparent border-b border-black  text-gray-700 mrpy-[3px] pr-[3px] leading-tight focus:outline-none focus:border-purple-600 focus:border-b-2" type="email" aria-label="Full name" />
+                <input value={inital.email} onChange={handleChange} name="email" className="md:w-[73%] w-[100%] h-[68.5px]appearance-none bg-transparent border-b border-black  text-gray-700 mrpy-[3px] pr-[3px] leading-tight focus:outline-none focus:border-purple-600 focus:border-b-2" type="email" aria-label="Full name" />
               </div>
             </div>
 
@@ -64,13 +94,14 @@ const Contact = ({contact}) => {
                 <label className="block tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                   Leave us a message...
                 </label>
-                <input className=" md:w-[73%] w-[100%] h-[68.5px] pt-[13.5px] pb-[3px] pr-[10px] appearance-none bg-transparent border-b border-black  text-gray-700  p-4  leading-tight focus:outline-none focus:border-purple-600 focus:border-b-2" type="email" aria-label="Full name">
+                <input value={inital.commants} onChange={handleChange} name="commants" className=" md:w-[73%] w-[100%] h-[68.5px] pt-[13.5px] pb-[3px] pr-[10px] appearance-none bg-transparent border-b border-black  text-gray-700  p-4  leading-tight focus:outline-none focus:border-purple-600 focus:border-b-2" type="email" aria-label="Full name">
 
                 </input>
               </div>
             </div>
             <div className="w-[140px] h-[50px]">
-              <Button label='Submit' />
+              
+              <Button label='Submit' onclick={handleSubmit} />
             </div>
 
           </div>

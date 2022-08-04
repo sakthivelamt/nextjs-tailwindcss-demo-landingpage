@@ -1,6 +1,6 @@
 import { PrismicRichText } from "@prismicio/react";
 const Goodnumber = ({goodWithNumber}) => {
-    console.log(goodWithNumber.data);
+
 
 
   return (
@@ -21,7 +21,6 @@ const Goodnumber = ({goodWithNumber}) => {
                             <div className="xm:text-sm w-full" >< PrismicRichText field={post.years_of_experience_para} /></div>
                       </div>
                       {id!==3 && <div className="md:pt-9 md:ml-[5%]" id={id}>
-                        {console.log({id})}
                           <div datatestid="svgRoot-comp-kq5dfsfl1" className="_3bLYT _2OIRR gNsvg">
                               <svg preserveAspectRatio="none" data-bbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 200 200" role="presentation" aria-hidden="true" >
                                   <g>

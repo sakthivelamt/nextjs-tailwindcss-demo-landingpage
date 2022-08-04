@@ -11,7 +11,7 @@ import Contant from "./contant"
 
 // const Main = ({page,...data}) => {
   const Main = ({data}) => {
-    console.log(data);
+    // console.log(data);
 
     const css = `@media (max-width: 320px) {
       .backimageff {
