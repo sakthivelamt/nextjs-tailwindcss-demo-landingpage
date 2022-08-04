@@ -1,3 +1,4 @@
+import { PrismicRichText } from "@prismicio/react"
 import Button from "../button";
 import React, {useEffect, useState} from "react";
 // import Link from 'next/link'
@@ -6,8 +7,9 @@ import MobBarNav from "../mobile view/mobscrol";
 
 
 
-const Header = () => {
+const Header = ({headerpris}) => {
  
+
  const[color,setcolor]=useState(false)
  const[navhide,setnavhide]=useState(false)
 
@@ -92,24 +94,24 @@ const contactScroll = () =>{
 //   window.addEventListener('scroll',conssLogh )
 // });
 
- 
+// console.log(headerpris.data.nav_button);
   return (
     <>
     <div className="w-[100%]">
     <header className={color ? 'header headerscrool' : 'header' } >
       <div className=" mx-auto flex flex-wrap xs:p-5 pl-[10px] py-[20px] xmm:flex-col flex-row items-center justify-between xsmw:justify-start	">
         <a className="flex title-font font-medium items-center text-purple-900 after:text-purple-900 xs:mb-4 md:mb-0">
-          <span className="xs:ml-3 text-xl">BizzBud</span>
+          <span className="xs:ml-3 text-xl"> <PrismicRichText field={headerpris?.data.navbar_headding} /> </span>
         </a>
         <nav className="md:ml-auto md:mr-auto xs:flex xs:flex-wrap xs:items-center xs:text-base xs:justify-center hidden">
-        <a className="mr-5 hover:text-purple-900 after:text-purple-90 cursor-pointer	" onClick={homeScroll}>Home</a>
-        <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={serviceScroll}>Service</a>
-        <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={aboutScroll}>About</a>
-        <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={testimonialScroll}>Testimonial</a>
-        <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={clientScroll}>Client</a>
-        <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={contactScroll}>contact</a>
+        <a className="mr-5 hover:text-purple-900 after:text-purple-90 cursor-pointer	" onClick={homeScroll}> <PrismicRichText field={headerpris?.data.nav_} /> </a>
+        <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={serviceScroll}> <PrismicRichText field={headerpris?.data.nav_service} /> </a>
+        <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={aboutScroll}> <PrismicRichText field={headerpris?.data.nav_about} /> </a>
+        <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={testimonialScroll}> <PrismicRichText field={headerpris?.data.nav_testimonial} /> </a>
+        <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={clientScroll}>  <PrismicRichText field={headerpris?.data.nav_client} /> </a>
+        <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={contactScroll}> <PrismicRichText field={headerpris?.data.nav_contact} /> </a>
         </nav>
-        <div className=" xs:ml-0 ml-20"><Button label='Call Now' /></div>
+        <div className=" xs:ml-0 ml-20"><Button label={headerpris.data.nav_button} /></div>
         </div>
     </header>
     </div>

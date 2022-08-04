@@ -1,4 +1,8 @@
-const ServBlocks = () => {
+import { PrismicRichText } from "@prismicio/react"
+
+const ServBlocks = ({service_section_one,service_section_two,service_section_three,service_section_para}) => {
+
+    // console.log(service_section_one);
     return (
     <div className="md:h-[500px] md:flex md:justify-around block">
         <div>
@@ -18,8 +22,8 @@ const ServBlocks = () => {
                         </svg>
                     </div>
                     <br/>
-                    <p className="text-center servpara"><b>Business Plans</b></p>
-                    <p className="text-center text-lg servpara">I&apos;m a paragraph. Click here to add <br/>your own text and edit me.</p>
+                    <div className="text-center servpara"><b>< PrismicRichText field={service_section_one} /></b></div>
+                    <div className="text-center text-lg servpara">< PrismicRichText field={service_section_para} /></div>
                 </div>
             </div>
         </div>
@@ -44,8 +48,8 @@ const ServBlocks = () => {
                         </svg>
                     </div>
                     <br/>
-                    <p className="text-center servpara"><b>Business Plans</b></p>
-                    <p className="text-center text-lg servpara">I&apos;m a paragraph. Click here to add <br/>your own text and edit me.</p>
+                    <div className="text-center servpara"><b>< PrismicRichText field={service_section_two} /></b></div>
+                    <div className="text-center text-lg servpara">< PrismicRichText field={service_section_para} /></div>
                 </div>
             </div>
         </div>
@@ -69,8 +73,8 @@ const ServBlocks = () => {
                         </svg>
                     </div>
                     <br/>
-                    <p className="text-center servpara "><b>Business Plans</b></p>
-                    <p className="text-center text-lg servpara ">I&apos;m a paragraph. Click here to add <br/>your own text and edit me.</p>
+                    <div className="text-center servpara "><b>< PrismicRichText field={service_section_three} /></b></div>
+                    <div className="text-center text-lg servpara ">< PrismicRichText field={service_section_para} /></div>
                 </div>
             </div>
 

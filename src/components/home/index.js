@@ -9,25 +9,43 @@ import Testimonial from "../testimonial"
 import Contant from "./contant"
 
 
-const Main = () => {
+// const Main = ({page,...data}) => {
+  const Main = ({data}) => {
+    console.log(data);
 
+    const css = `@media (max-width: 320px) {
+      .backimageff {
+          background-image: url(${data.homePage.data.hero_image_mobile.url});
+          background-position: right bottom;
+          background-repeat: no-repeat;
+      }
+  }
+   
+  @media (min-width: 322px) {
+      .backimageff {
+          background-image: url(${data.homePage.data.hero_image.url});
+          background-repeat: no-repeat;
+      }
+  }`;
 
   return (
     <div>
-      <div className="main-Background h-screen bg-right-top mainBackground-mobile xsmw:h-[520px]">
-        <Contant />
+      <style >{css}</style>
+      <div className=" backimageff h-screen bg-right-top mainBackground-mobile xsmw:h-[520px]" >
+        <Contant {...data}/>
       </div>
-      <ServHead />
-      <Goodnumber />
-      <About />
-      <Testimonial />
-      <Contact />
-      <Footer />
-      <Chat />
-      <ScrollTop />
+      <ServHead {...data}/>
+      <Goodnumber {...data}/>
+      <About {...data} />
+      <Testimonial {...data}/>
+      <Contact {...data}/>
+      <Footer {...data}/>
+      <Chat {...data}/>
+      <ScrollTop {...data}/>
       
     </div>
   )
 }
 
 export default Main
+

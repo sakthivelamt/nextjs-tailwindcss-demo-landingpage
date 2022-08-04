@@ -14,6 +14,7 @@ module.exports = {
 			'mxsm':{'max':'639px'}, 
 			'xsmw':{'max':'475px'}, 
 			'xm' :{'max' : '320px'},
+			'xxs':'320px',
 			'xs': '475px',
 			'sm': '640px',
       		'md': '768px',

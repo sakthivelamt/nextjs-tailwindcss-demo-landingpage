@@ -1,19 +1,21 @@
+import { PrismicRichText } from "@prismicio/react";
 import Button from "../button"
 
-const Contact = () => {
+const Contact = ({contact}) => {
+  // console.log(contact.data);
   return (
 
-    <div className=" md:flex bg-[url('/wix-contact.webp')] md:h-[660px] bg-no-repeat bg-cover max-w-full">
+    <div className=" md:flex bg-[url('/wix-contact.webp')] md:h-[660px] bg-no-repeat bg-cover max-w-full" style={{backgroundImage:`url(${contact.data.contact_image})`}}>
       <div className="md:w-1/2 mxmd:px-[10%]">
         <div className="md:relative md:left-[16%] md:right-[16%] mxmd:pt-[50px]">
-          <p className="md:relative md:top-[95px] md:w-[200px] text-base md:text-start text-center">
-            Contact
-          </p>
-          <p className="md:relative md:top-[122px] md:text-4xl	md:text-start text-center w-[100%] mxmd:pt-[15px] mxmd:text-xl mxmd:font-bold">
-            <span>Let’s Work Together</span>
-          </p>
+          <div className="md:relative md:top-[95px] md:w-[200px] text-base md:text-start text-center">
+            <PrismicRichText field={contact.data.contact} />
+          </div>
+          <div className="md:relative md:top-[122px] md:text-4xl	md:text-start text-center w-[100%] mxmd:pt-[15px] mxmd:text-xl mxmd:font-bold">
+            <PrismicRichText field={contact.data.contact_heading} />
+          </div>
           <address className="md:relative  md:top-[160px] md:text-start text-center mxmd:leading-7 mxmd:pt-[15px]  ">
-            <span>500 Terry Francois St. San Francisco, CA 94158 <br />info@mysite.com <br />Tel: 123-456-7890</span>
+            <PrismicRichText field={contact.data.address} />
           </address>
           <div>
             <div className="flex md:absolute  md:top-[340px] md:w-[95px] md:justify-between w-[100%] justify-center mxmd:pt-[25px] mxmd:gap-[10px]">
