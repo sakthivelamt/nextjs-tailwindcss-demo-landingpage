@@ -1,41 +1,44 @@
 import { PrismicRichText } from "@prismicio/react";
 import Button from "../button"
-import React,{useState} from "react";
-const Contact = ({contact}) => {
+import React, { useState } from "react";
+const Contact = ({ contact }) => {
 
 
-const[inital,setValue] = useState({
-  firstname: "",
-  lastname: "",
-  email:"",
-  commants:""
-})
-
-const handleChange = (e) => {
-  console.log(e);
-  setValue((prevState)=>({
-    ...prevState,
-    [e.target.name]: e.target.value
-  }));
-};
-
-const handleSubmit = (e) => {
-  e.preventDefault()
-  console.log(inital);
-
-  return fetch('/.netlify/functions/todo', {
-    body: JSON.stringify(inital),
-    method: 'POST'
-  }).then(response => {
-    return response.json()
+  const [inital, setValue] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    commants: ""
   })
-  // ... submit to API or something
-};
 
-// )
+  const handleChange = (e) => {
+    // console.log(e);
+    setValue((prevState) => {
+      // console.log("prevState => ",prevState)
+      return {
+        ...prevState,
+        [e.target.name]: e.target.value
+      }
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // console.log(inital);
+
+    return fetch('/.netlify/functions/todo', {
+      body: JSON.stringify(inital),
+      method: 'POST'
+    }).then(response => {
+      return response.json()
+    })
+    // ... submit to API or something
+  };
+
+  // )
   return (
 
-    <div className=" md:flex bg-[url('/wix-contact.webp')] md:h-[660px] bg-no-repeat bg-cover max-w-full" style={{backgroundImage:`url(${contact.data.contact_image})`}}>
+    <div className=" md:flex bg-[url('/wix-contact.webp')] md:h-[660px] bg-no-repeat bg-cover max-w-full" style={{ backgroundImage: `url(${contact.data.contact_image})` }}>
       <div className="md:w-1/2 mxmd:px-[10%]">
         <div className="md:relative md:left-[16%] md:right-[16%] mxmd:pt-[50px]">
           <div className="md:relative md:top-[95px] md:w-[200px] text-base md:text-start text-center">
@@ -100,7 +103,7 @@ const handleSubmit = (e) => {
               </div>
             </div>
             <div className="w-[140px] h-[50px]">
-              
+
               <Button label='Submit' onclick={handleSubmit} />
             </div>
 
