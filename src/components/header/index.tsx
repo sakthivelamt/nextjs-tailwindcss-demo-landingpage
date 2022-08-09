@@ -2,12 +2,29 @@ import { PrismicRichText } from "@prismicio/react"
 import Button from "../button";
 import React, {useEffect, useState} from "react";
 // import Link from 'next/link'
-import MobBarNav from "../mobile view/mobscrol";
+import MobBarNav from "./mobscrol";
 
 
+interface headerProps{
+    headerpris?:{
+        data:{
+            navbar_headding:any;
+            nav_button:any;
+            nav_:any;
+            nav_service:any;
+            nav_about:any;
+            nav_testimonial:any;
+            nav_client:any;
+            nav_contact:any;
+        };
+    };
+}
 
 
-const Header = ({headerpris}) => {
+const Header = ({headerpris}:headerProps) => {
+
+  
+  
  
 
  const[color,setcolor]=useState(false)
@@ -87,14 +104,7 @@ const contactScroll = () =>{
   left:0,
   behavior : 'smooth'})
 } 
-// const conssLogh = () =>{
-// console.log(window.scroll())}
 
-// useEffect(()=>{
-//   window.addEventListener('scroll',conssLogh )
-// });
-
-// console.log(headerpris.data.nav_button);
   return (
     <>
     <div className="w-[100%]">
@@ -111,7 +121,7 @@ const contactScroll = () =>{
         <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={clientScroll}>  <PrismicRichText field={headerpris?.data.nav_client} /> </a>
         <a className="mr-5 hover:text-purple-900 after:text-purple-900 cursor-pointer	" onClick={contactScroll}> <PrismicRichText field={headerpris?.data.nav_contact} /> </a>
         </nav>
-        <div className=" xs:ml-0 ml-20"><Button label={headerpris.data.nav_button} /></div>
+        <div className=" xs:ml-0 ml-20"><Button label={headerpris?.data.nav_button} /></div>
         </div>
     </header>
     </div>

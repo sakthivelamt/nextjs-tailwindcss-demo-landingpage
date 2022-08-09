@@ -1,7 +1,11 @@
 import ServBlocks from "./serveblocks"
 import { PrismicRichText } from "@prismicio/react"
 
-const ServHead = ({service}) =>{
+interface serviceHeadProps{
+    service:any;
+}
+
+const ServHead = ({service}:serviceHeadProps) =>{
     // console.log(service.data);
     return(
         <div>

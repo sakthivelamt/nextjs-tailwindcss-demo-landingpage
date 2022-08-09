@@ -1,6 +1,4 @@
-import Main from "../src/components/home/index.js"
-
-
+import Main from "../src/components/home/index.tsx"
 import { createClient } from '../prismicio'
 
 
@@ -17,8 +15,8 @@ export default function Home(props) {
   )
 }
 export async function getStaticProps({ previewData }) {
+  
   const client = createClient({ previewData })
-
   const homePage = await client.getSingle('home_page')
   const header = await client.getSingle('headder')
   const service = await client.getSingle('service')

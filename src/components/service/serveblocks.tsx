@@ -1,6 +1,13 @@
 import { PrismicRichText } from "@prismicio/react"
 
-const ServBlocks = ({service_section_one,service_section_two,service_section_three,service_section_para}) => {
+interface serviceBlockProps{
+    service_section_one:any;
+    service_section_two:any;
+    service_section_three:any;
+    service_section_para:any;
+}
+
+const ServBlocks = ({service_section_one,service_section_two,service_section_three,service_section_para}:serviceBlockProps) => {
 
     // console.log(service_section_one);
     return (

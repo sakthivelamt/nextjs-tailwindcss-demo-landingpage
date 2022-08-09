@@ -1,6 +1,6 @@
 module.exports = {
 	purge: [
-		'./src/components/**/*.js',
+		'./src/components/**/*.tsx',
 		'./pages/**/*.js',
 		'./node_modules/tw-elements/dist/js/**/*.js'
 	],

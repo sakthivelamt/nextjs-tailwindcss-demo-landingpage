@@ -1,7 +1,19 @@
 import { PrismicRichText } from "@prismicio/react";
 import Button from "../button"
 import React, { useState } from "react";
-const Contact = ({ contact }) => {
+interface Contactprops{
+    contact:{
+      data:{
+        contact:any
+        contact_heading:any;
+        address:any;
+        contact_image:any
+      };
+    }
+    
+}
+
+const Contact = ({contact}:Contactprops) => {
 
 
   const [inital, setValue] = useState({
@@ -11,26 +23,27 @@ const Contact = ({ contact }) => {
     commants: ""
   })
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     // console.log(e);
     setValue((prevState) => {
       // console.log("prevState => ",prevState)
       return {
+        // firstname:prevState.firstname,r
         ...prevState,
         [e.target.name]: e.target.value
       }
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault()
-    // console.log(inital);
+    console.log(inital);
 
     return fetch('/.netlify/functions/todo', {
       body: JSON.stringify(inital),
       method: 'POST'
     }).then(response => {
-      return response.json()
+        return response.json()
     })
     // ... submit to API or something
   };
@@ -42,7 +55,7 @@ const Contact = ({ contact }) => {
       <div className="md:w-1/2 mxmd:px-[10%]">
         <div className="md:relative md:left-[16%] md:right-[16%] mxmd:pt-[50px]">
           <div className="md:relative md:top-[95px] md:w-[200px] text-base md:text-start text-center">
-            <PrismicRichText field={contact.data.contact} />
+            <PrismicRichText field = {contact.data.contact} />
           </div>
           <div className="md:relative md:top-[122px] md:text-4xl	md:text-start text-center w-[100%] mxmd:pt-[15px] mxmd:text-xl mxmd:font-bold">
             <PrismicRichText field={contact.data.contact_heading} />
@@ -104,7 +117,7 @@ const Contact = ({ contact }) => {
             </div>
             <div className="w-[140px] h-[50px]">
 
-              <Button label='Submit' onclick={handleSubmit} />
+              <Button label='Submit' handleClick={handleSubmit} />
             </div>
 
           </div>

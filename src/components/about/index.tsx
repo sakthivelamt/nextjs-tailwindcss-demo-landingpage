@@ -1,6 +1,10 @@
 import { PrismicRichText } from "@prismicio/react";
+import React from "react";
 
-const About = ({about}) => {
+type AboutProps ={
+  about:any;
+  }
+const About = ({about}:AboutProps) => {
   // console.log(about.data.about_right_image.url);
   return (
     <div className="xs:flex ">

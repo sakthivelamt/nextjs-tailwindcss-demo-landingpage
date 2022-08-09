@@ -2,6 +2,9 @@
 
 const MobBarNav = () => {
 
+
+    
+
     // for home scroll
     const homeScroll = () => {
         window.scroll(

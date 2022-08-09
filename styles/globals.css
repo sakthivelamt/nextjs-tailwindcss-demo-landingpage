@@ -57,6 +57,21 @@ z-index: 5;
 .test{
     background-color: red;
 }
-/* body{
-    max-width: 1440px;
-} */
+
+.chatbox{
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 30;
+}
+.chatboxonclick{
+    position: fixed;
+    bottom: 500px;
+    right: 16px;
+    z-index: 30;
+}
+.chatboxonclickMobile{
+    z-index: 30;
+    width: 100vw;
+    height: 100vh;
+}

@@ -2,9 +2,14 @@
     const mailjet = require ('node-mailjet').apiConnect('dd40ee0d011aff16cc7da83483d89db0', 'ff6cf0464f10a0518df24db917e79a3e')
 exports.handler = async function (event, context) {
     const data = JSON.parse(event.body);
-    console.log("content =>",context);
+    // console.log("content =>",context);
 
-    const callBack = (e) => {console.log("=>callback",e);}
+    const callBack = (e) => {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ message: "Hello World" }),
+      };
+    }
 const request = mailjet
 .post("send", {'version': 'v3.1'})
 .request({
@@ -27,9 +32,9 @@ const request = mailjet
     }
   ]
 }).then(callBack)
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: "Hello World" }),
-    };
+.catch(()=>({
+  statusCode: 500,
+}))
+    return request
   };
   

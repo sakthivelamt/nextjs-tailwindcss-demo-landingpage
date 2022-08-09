@@ -11,12 +11,12 @@ const [chatBoxVisible, setChatBoxVisible] = useState(false)
 
 
     return (
-        <div className=" fixed bottom-4 right-4">
+        <div className=" fixed xs:bottom-4 bottom-0 xs:right-4 right-0 z-30">
 
             {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" >click</button> */}
 
             { chatBoxVisible &&  
-            <div className="w-[340px] h-[500px] bg-[white] rounded-2xl relative">
+            <div className="xs:w-[340px] xs:h-[500px] h-[100vh] w-[100vw] bg-[white] xs:rounded-2xl rounded-none relative">
                 <div onClick={() => setChatBoxVisible(false)} className="cursor-pointer text-[black] absolute right-4 top-2"> x </div>
                 <div className="w-[284px] h-[80px] relative top-6 left-4 bg-[white]"> <span className="font-semibold	">BizzBud</span> <br/><span>We’ll reply as soon as we can</span></div>
                 <div className="w-[340px] h-[359px] bg-gradient-to-b from-gray-300	 via-gray-100 to-white	relative top-3 border-b-[1px] border-slate-400 "></div>
