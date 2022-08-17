@@ -10,7 +10,6 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-      lang='en'
         <title>nextjs demo landing page</title>
         <meta name="landing page" content="landing page for practice in the amt" />
       </Head>
