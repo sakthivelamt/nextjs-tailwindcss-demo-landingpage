@@ -18,7 +18,6 @@ const ServBlocks = ({service_section_one,service_section_two,service_section_thr
                     <div className="flex justify-center">
                         <svg preserveAspectRatio="xMidYMid meet" data-bbox="26.5 23.75 147 152.5" viewBox="26.5 23.75 147 152.5" height="200" width="200" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-labelledby="svgcid--48p1oi-wqp3xl" className="h-28 w-28 srvlbksvg">
                             <defs>
-                                {/* style={{#comp-kq5dfsen svg [data-color="1"] {fill: #16163F;} #comp-kq5dfsen svg [data-color="2"] {fill: #DDBBFF;} #comp-kq5dfsen svg [data-color="3"] {fill: #9E3FFD;}}} */}
                             </defs>
                             <title id="svgcid--48p1oi-wqp3xl"></title>
                             <g>
@@ -42,9 +41,6 @@ const ServBlocks = ({service_section_one,service_section_two,service_section_thr
                     <div className="flex justify-center">
                         <svg preserveAspectRatio="xMidYMid meet" data-bbox="20 34.606 159.999 126.634" viewBox="20 34.606 159.999 126.634" height="93" width="118" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-labelledby="svgcid--pcqmu3-hr753i " className="h-[93] w-[118] srvlbksvg">
                             <defs>
-                                {/* <style>
-                                    #comp-kq9ag33l svg [data-color="1"] {fill: #16163F;}#comp-kq9ag33l svg [data-color="2"] {fill: #DDBBFF;}#comp-kq9ag33l svg [data-color="3"] {fill: #9E3FFD;}
-                                </style> */}
                             </defs>
                             <title id="svgcid--pcqmu3-hr753i"></title>
                             <g>
@@ -68,7 +64,6 @@ const ServBlocks = ({service_section_one,service_section_two,service_section_thr
                     <div className="flex justify-center">
                         <svg preserveAspectRatio="xMidYMid meet" data-bbox="26.982 26 146.037 148" viewBox="26.982 26 146.037 148" height="107" width="105" xmlns="http://www.w3.org/2000/svg" data-type="color" role="presentation" aria-hidden="true" aria-labelledby="svgcid--p3s0x7-giv60p" className="srvlbksvg">
                             <defs>
-                                {/* <style>#comp-kq5dfsf71 svg [data-color="1"] {fill: #16163F;}#comp-kq5dfsf71 svg [data-color="2"] {fill: #DDBBFF;}#comp-kq5dfsf71 svg [data-color="3"] {fill: #9E3FFD;}</style> */}
                             </defs>
                             <title id="svgcid--p3s0x7-giv60p"></title>
                             <g>

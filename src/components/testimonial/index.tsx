@@ -2,14 +2,18 @@ import { useEffect } from "react"
 import Customer from "./customer"
 
 
-const Testimonial = () => {
+const Testimonial = ({ refe }) => {
+
+  const refeProps = refe == undefined
+
   useEffect(() => {
     require('tw-elements')
   }, [])
+
   return (
     <div>
-      <div className="h-[107px] bg-[#9e3ffd] relative">
-      <p className="text-white text-center absolute bottom-0 left-[30%] right-[30%]">TESTIMONIALS</p>
+      <div className="h-[107px] bg-[#9e3ffd] relative" ref={refeProps? null :refe[3]}>
+        <p className="text-white text-center absolute bottom-0 left-[30%] right-[30%]">TESTIMONIALS</p>
       </div>
       <div className='bg-violet text-center leading-none font-bold h-[400] bg-[#9e3ffd] '>
 
@@ -66,10 +70,10 @@ const Testimonial = () => {
               </div>
             </div>
           </div>
-      
+
         </div>
       </div>
-      <Customer />
+      <Customer refe={refe} />
     </div>
   )
 }

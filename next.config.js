@@ -1,5 +1,11 @@
 const path = require('path')
+
 module.exports = {
+	i18n: {
+		locales: ['en-US'],
+    defaultLocale: 'en-US',
+	reactStrictMode: true,
+	},
 	trailingSlash: true,
 	webpackDevMiddleware: config => {
 		config.watchOptions = {
@@ -11,5 +17,6 @@ module.exports = {
 	},
 	sassOptions: {
 		includePaths: [path.join(__dirname, 'styles')]
-	}
+	},
+	
 }
