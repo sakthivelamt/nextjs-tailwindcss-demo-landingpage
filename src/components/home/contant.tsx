@@ -15,12 +15,11 @@ interface homeprops{
 
 const Contant = ({ homePage,refe }:homeprops) => {
   
-const refeProps = refe == undefined
   
 
   return (
 
-    <div className="md:mt-32 md:ml-32 md:text-left text-center xsmw:h-[393px] h-[100%]" ref={refeProps? null :refe[0]}>
+    <div className="md:mt-32 md:ml-32 md:text-left text-center xsmw:h-[393px] h-[100%]" ref={refe == undefined ? null :refe[0]}>
       <div className="mxmd:pt-36" >
         <h1 className="sm:h-[192px] xs:text-6xl xs:font-extrabold leading-tight tracking-tight text-4xl font-semibold "> <PrismicRichText field={homePage?.data.title} />  </h1>
         

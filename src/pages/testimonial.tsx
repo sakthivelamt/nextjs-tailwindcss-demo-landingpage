@@ -1,9 +1,10 @@
 import Header from '../components/header'
 import Testimonial from '../components/testimonial'
 import Footer from '../components/footer'
-import { createClient } from '../../prismicio';
+import {getData} from '../helper/prismicdata'
 
-export default function TestimonialPage (props) {
+
+export default function TestimonialPage ({props}) {
     return (
         <div>
         <Header {...props} />
@@ -13,16 +14,10 @@ export default function TestimonialPage (props) {
     )
 }
 
-export async function getStaticProps({ previewData }) {
-
-    const client = createClient({ previewData })
-    const header = await client.getSingle('headder')
-    const testimonial = await client.getSingle('testimonial')
-    const footer = await client.getSingle('footer')
-
-    return{
-        props: {
-            header,testimonial,footer
-        },
+export async function getStaticProps() {
+  
+    const props = await getData()
+    return {
+      props
     }
-}
+  } 

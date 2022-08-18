@@ -1,9 +1,10 @@
 import Header from '../components/header'
 import Footer from '../components/footer'
 import ServHead from '../components/service'
-import { createClient } from "../../prismicio";
+import {getData} from '../helper/prismicdata'
 
-export default function ServicePage  (props)  {
+
+export default function ServicePage  ({props})  {
 
     return(
         <>
@@ -14,16 +15,10 @@ export default function ServicePage  (props)  {
     )
 }
 
-export async function getStaticProps({ previewData }) {
+export async function getStaticProps() {
   
-    const client = createClient({ previewData })
-    const header = await client.getSingle('headder')
-    const service = await client.getSingle('service')
-    const footer = await client.getSingle('footer')
-  
-    return {
-      props: {
-        header,service,footer
-      },
-    }
+  const props = await getData()
+  return {
+    props
   }
+} 

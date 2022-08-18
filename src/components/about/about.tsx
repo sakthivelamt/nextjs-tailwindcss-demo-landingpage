@@ -6,15 +6,9 @@ interface AboutProps  {
   about: any;
 }
 const About = ({ about ,refe }: AboutProps ) => {
-console.log("refee =>",refe);
-
-const refeProps = refe == undefined
-
-
-
 
   return (
-    <div className="xs:flex " ref={refeProps? null :refe[2]} >
+    <div className="xs:flex " ref={refe == undefined ? null :refe[2]} >
       <div className=" xs:w-1/2 xsmw:text-center">
         <div className="md:mx-28 mx-4">
           <h2 className="xs:pt-24 pt-12 xsmw:pb-5 font-semibold xsmw:text-base"> <PrismicRichText field={about.data.about_title} /></h2>

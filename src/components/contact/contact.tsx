@@ -44,11 +44,10 @@ const Contact = ({ contact, refe }: Contactprops) => {
     })
   };
 
-  const refeProps = refe == undefined
 
   return (
 
-    <div className=" md:flex bg-[url('/wix-contact.webp')] md:h-[660px] bg-no-repeat bg-cover max-w-full" style={{ backgroundImage: `url(${contact.data.contact_image})` }} ref={refeProps? null :refe[5]}>
+    <div className=" md:flex bg-[url('/wix-contact.webp')] md:h-[660px] bg-no-repeat bg-cover max-w-full" style={{ backgroundImage: `url(${contact.data.contact_image})` }} ref={refe == undefined? null :refe[5]}>
       <div className="md:w-1/2 mxmd:px-[10%]">
         <div className="md:relative md:left-[16%] md:right-[16%] mxmd:pt-[50px]">
           <div className="md:relative md:top-[95px] md:w-[200px] text-base md:text-start text-center">

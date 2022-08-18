@@ -1,15 +1,14 @@
 import Header from "../components/header"
 import Main from "../components/home"
 import Footer from "../components/footer"
-import { createClient } from '../../prismicio'
 import useScrollSpy from 'react-use-scrollspy'
 import React, { useRef } from "react"
+import {getData} from '../helper/prismicdata'
 
 
 
+export default function Home({props}) {
 
-
-export default function Home(props) {
 
 
   // for scroll spy
@@ -27,8 +26,6 @@ export default function Home(props) {
     offsetPx: -80,
   });
 
-  console.log("activeSection ==>",activeSection);
-  console.log("refe ==>",sectionRefs);
     
 
   return (
@@ -41,21 +38,10 @@ export default function Home(props) {
      </div>
   )
 }
-export async function getStaticProps({ previewData }) {
+export async function getStaticProps() {
   
-  const client = createClient({ previewData })
-  const homePage = await client.getSingle('home_page')
-  const service = await client.getSingle('service')
-  const header = await client.getSingle('headder')
-  const goodWithNumber = await client.getSingle('good_in_number')
-  const about = await client.getSingle('about')
-  const testimonial = await client.getSingle('testimonial')
-  const contact = await client.getSingle('contact')
-  const footer = await client.getSingle('footer')
-
+  const props = await getData()
   return {
-    props: {
-      homePage,header,service,goodWithNumber,about,testimonial,contact,footer
-    },
+    props
   }
 }

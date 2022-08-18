@@ -2,10 +2,9 @@
 
 const Customer = ({refe}) => {
 
-  const refeProps = refe == undefined
 
   return (
-    <section className="bg-[#f8f0ff]" ref={refeProps? null :refe[4]}>
+    <section className="bg-[#f8f0ff]" ref={refe == undefined ? null :refe[4]}>
       <p className="text-base	h-[80px] text-center pt-10 md:border-b	border-white"><b>OUR HAPPY CLIENTS</b></p>
       <div className="flex justify-around md:h-[130px] md:items-center md:flex-row flex-col items-center ">
         <div className="w-[124px] xsmw:py-[25px]">

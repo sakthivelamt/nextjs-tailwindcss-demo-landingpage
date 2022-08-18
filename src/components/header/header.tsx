@@ -19,15 +19,14 @@ interface headerProps{
             nav_testimonial:any;
             nav_client:any;
             nav_contact:any;
-        };
-      };
+        }
+      }
 }
 
 
 const Header = ({header,activeSection}:headerProps) => {
 
 
-  console.log("activeSection ==>",activeSection);
   
 
 // for change header style in other pages 
